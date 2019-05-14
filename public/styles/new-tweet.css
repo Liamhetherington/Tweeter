@@ -1,0 +1,40 @@
+.new-tweet {
+  border-radius: 15px;
+  border: 3px solid brown;
+  background-color: beige;
+  padding:5px;
+  color: brown;
+  line-height:10px;
+}
+
+.new-tweet h2 {
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 2em;
+}
+
+.new-tweet .counter {
+  padding-left:90%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  font-size:18px;
+}
+
+.new-tweet textarea {
+  padding: 10px;
+  line-height: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.new-tweet input {
+  color: brown;
+  padding: 10px;
+  font-size: 2em;
+  margin-bottom: 1px;
+  margin-right: 90%;
+  margin-left: 15px;
+  border-radius: 5px;
+}
