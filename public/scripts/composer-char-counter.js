@@ -1,7 +1,7 @@
 $(document).ready(function() {
   const textArea = document.querySelector('textarea[name=text]');
 
-  $(textArea).on('keypress', function () {
+  $(textArea).on('keydown', function () {
   const textLength = $(this).val().length; //"this" === 'textarea'
   console.log(textLength)
   const countRemaining = 140 - textLength;
@@ -13,7 +13,6 @@ $(document).ready(function() {
   } else {
     $(counter).css('color', 'brown');
   }
-
   })
 
 });
