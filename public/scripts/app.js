@@ -98,6 +98,17 @@ $(document).ready(function () {
    $(function () {
     let $submission = $('form');
     $submission.on("submit", function (event) {
+
+      let tweetLength = $('#tweetinput').val().length;
+      console.log(tweetLength);
+
+        if (tweetLength > 140) {
+          alert("Your tweet is too long!");
+        }
+        if (tweetLength === 0 || tweetLength === "" || tweetLength === null) {
+          alert("Your tweet is empty!");
+        }
+
       event.preventDefault();
       console.log('Tweeting...');
       $.ajax({
@@ -108,6 +119,7 @@ $(document).ready(function () {
         console.log("new post: " + addPost)
         $submission.append();
         })
+
       })
     });
   });
