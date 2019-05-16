@@ -7,16 +7,16 @@
   height: 250px;
   padding:1px;
   background-color: #45A29E;
+  opacity: 0.6;
+  filter: alpha(opacity=50);
 }
 
+.tweet:hover{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
 .tweet article {
   height: 200px;
-  opacity: 0.6;
-}
-
-.tweet article:hover {
-  opacity: 1;
-
 }
 
 .tweet header {
