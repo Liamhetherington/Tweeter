@@ -73,10 +73,11 @@ function createTweetElement(tweet) {
 }
 
 function renderTweets (tweets) {
+ $('.tweet-container').empty();
  let $newContainer = $('.tweet-container');
  tweets.forEach(function (tweet) {
   let $post = createTweetElement(tweet)
-  $newContainer.append($post)
+  $newContainer.prepend($post)
   })
 }
 
@@ -87,13 +88,16 @@ function loadTweets () {
     data: JSON,
     success: function (data) {
       renderTweets(data)
+      console.log("you appendi")
     }
+
   })
 }
 
+loadTweets();
+
 $(document).ready(function () {
 
- loadTweets();
 
    $(function () {
     let $submission = $('form');
@@ -110,17 +114,16 @@ $(document).ready(function () {
         }
 
       event.preventDefault();
-      console.log('Tweeting...');
       $.ajax({
         type: 'POST',
         url:'/tweets',
         data: $('#new-post').serialize(),
         success:(function (addPost) {
-        console.log("new post: " + addPost)
-        $submission.append();
+           loadTweets();
+          console.log("you made it")
         })
-
       })
+      return false;
     });
   });
 });
