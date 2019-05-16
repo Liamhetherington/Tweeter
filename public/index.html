@@ -27,6 +27,27 @@
 
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+<!--     <script>
+      $(function () {
+        let $submission = $('#submit');
+        $submission.on('click', function () {
+          $submission.preventDefault().serialize();
+          console.log('Tweeting...');
+          $.ajax('#new-tweet', {
+            method: 'POST',
+            success: success,
+            data: data
+            })
+          .then(function (addPost) {
+            console.log("this is the new post: ", addPost);
+            $submission.replaceWith(addPost);
+          })
+        })
+      })
+    </script> -->
+<script>
+
+</script>
 
   </head>
 
@@ -44,16 +65,14 @@
     <main class="container">
       <section class="new-tweet">
        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets">
+        <form id="new-post" method="POST" action="/">
            <textarea name="text" placeholder="What are you humming about?"></textarea>
            <input type="submit" value="Tweet">
            <span class="counter">140</span>
         </form>
       </section>
      <section class='tweet-container'>
-
      </section>
     </main>
-
   </body>
 </html>
