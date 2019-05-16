@@ -27,7 +27,7 @@
 #nav-bar .compose {
   float: right;
   height: 100px;
-  width: 15%;
+  width: 15% fixed;
   margin-right: 100px;
   margin-top: 20px;
   color: #66FCF1;

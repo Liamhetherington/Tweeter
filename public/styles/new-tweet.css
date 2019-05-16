@@ -5,7 +5,7 @@
   color: #66FCF1;
   padding:5px;
   line-height:10px;
-  display: none;
+  display:none;
 }
 
 .new-tweet h2 {
@@ -23,7 +23,6 @@
   padding-right: 20px;
   padding-bottom: 20px;
   font-size:18px;
-
 }
 
 .new-tweet textarea {
@@ -33,6 +32,7 @@
   line-height: 10px;
   width: 100%;
   margin-bottom: 10px;
+  resize: none;
 }
 
 .new-tweet input {
@@ -40,8 +40,18 @@
   color: #66FCF1;
   padding: 10px;
   font-size: 2em;
+  margin-top:15px;
   margin-bottom: 1px;
   margin-right: 90%;
   margin-left: 15px;
   border-radius: 5px;
+}
+
+.new-tweet label{
+  float: right;
+  padding: 5px 5px 10px 10px;
+  display: none;
+  background-color:red;
+  float: right;
+  margin-bottom: 20px;
 }
