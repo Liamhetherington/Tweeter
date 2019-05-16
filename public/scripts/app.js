@@ -50,7 +50,6 @@
 //   }
 // ];
 
-
 function createTweetElement(tweet) {
   let $tweet = $('<article>').addClass('tweet');
   let $header = $('<header>');
@@ -88,7 +87,6 @@ function loadTweets () {
     data: JSON,
     success: function (data) {
       renderTweets(data)
-      console.log("you appendi")
     }
 
   })
@@ -98,6 +96,9 @@ loadTweets();
 
 $(document).ready(function () {
 
+  $('.compose').on("click", function () {
+    $('.new-tweet').toggle();
+  });
 
    $(function () {
     let $submission = $('form');

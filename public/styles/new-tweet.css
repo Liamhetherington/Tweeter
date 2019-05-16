@@ -5,6 +5,7 @@
   color: #66FCF1;
   padding:5px;
   line-height:10px;
+  display: none;
 }
 
 .new-tweet h2 {

@@ -8,7 +8,7 @@
 }
 
 #nav-bar .header {
-  text-shadow: -1px 0#66FCF1, 0 1px #66FCF1, 1px 0 #66FCF1, 0 -1px #66FCF1;
+  text-shadow: -1px #66FCF1, 0 1px #66FCF1, 1px 0 #66FCF1, 0 -1px #66FCF1;
   margin-top:10px;
   line-height: 90px;
   font-size: 4em;
@@ -17,10 +17,29 @@
   float:left;
 }
 
-
 #nav-bar .logo {
   width: 100px;
   height: 100px;
   margin-right: 5px;
   float: left;
+}
+
+#nav-bar .compose {
+  float: right;
+  height: 100px;
+  width: 15%;
+  margin-right: 100px;
+  margin-top: 20px;
+  color: #66FCF1;
+  background-color: #1F2833;
+  border-radius: 15px;
+  border: 2px solid #66FCF1;
+  font-size: 2em;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#nav-bar .compose:hover{
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
