@@ -33,7 +33,9 @@
   height: 30px;
   float:right;
   margin: .5%;
+  visibility: hidden;
 }
+
 
 .tweet img {
   padding-top: 5px;
@@ -76,4 +78,5 @@
   padding-left: 10px;
   border-top: 2px #66FCF1 solid;
 }
+
 
