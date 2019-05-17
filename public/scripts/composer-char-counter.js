@@ -11,7 +11,7 @@ $(document).ready(function() {
   if (countRemaining < 0) {
     $(counter).css('color', 'red');
   } else {
-    $(counter).css('color', 'brown');
+    $(counter).css();
   }
   })
 

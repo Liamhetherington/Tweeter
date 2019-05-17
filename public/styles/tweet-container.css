@@ -15,9 +15,6 @@
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.tweet article {
-  height: 200px;
-}
 
 .tweet header {
   float: left;
@@ -29,8 +26,6 @@
 }
 
 .tweet img {
-  padding-top: 10px;
-  float: left;
   margin: 0 1.5%;
   width: 10%;
   border-radius: 15px;
