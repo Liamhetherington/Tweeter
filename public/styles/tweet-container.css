@@ -16,6 +16,10 @@
   filter: alpha(opacity=100);
 }
 
+.tweet:hover .icon{
+  visibility: visible;
+}
+
 .tweet header {
   float: left;
   width:100%;
@@ -25,10 +29,18 @@
   border-bottom: 2px solid #66FCF1;
 }
 
+.tweet img.icon {
+  height: 30px;
+  float:right;
+  margin: .5%;
+}
+
 .tweet img {
-  margin: 0 1.5%;
-  width: 10%;
-  border-radius: 15px;
+  padding-top: 5px;
+  padding-left: 5px;
+  height: 40px;
+  float:left;
+  margin: .5%;
 }
 
 .tweet h3 {
@@ -60,10 +72,8 @@
 
 }
 .tweet footer {
-  padding-left: 5px;
-  margin-top: 20px;
+  padding-top: 5px;
+  padding-left: 10px;
   border-top: 2px #66FCF1 solid;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 

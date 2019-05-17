@@ -65,9 +65,9 @@ function createTweetElement(tweet) {
     // console.log("Time created ", $timeCreated)
     console.log(tweet.created_at, "time")
     let $date = moment(tweet.created_at).fromNow();
-    let $like = $('<img>').addClass('icon1').attr('src',"https://img.icons8.com/material/24/000000/facebook-like.png");
-    let $retweet = $('<img>').addClass('icon2').attr('src', "https://img.icons8.com/ios/50/000000/retweet-filled.png");
-    let $flag = $('<img>').addClass('icon3').attr('src', "https://img.icons8.com/ios/50/000000/flag-filled.png");
+    let $like = $('<img>').addClass('icon').attr('src',"https://img.icons8.com/material/24/000000/facebook-like.png");
+    let $retweet = $('<img>').addClass('icon').attr('src', "https://img.icons8.com/ios/50/000000/retweet-filled.png");
+    let $flag = $('<img>').addClass('icon').attr('src', "https://img.icons8.com/ios/50/000000/flag-filled.png");
 
 // Test / driver code (temporary)
     $header.append($userAvatar).append($userID).append($userHandle);
