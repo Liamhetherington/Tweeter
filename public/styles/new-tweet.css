@@ -1,8 +1,7 @@
 .new-tweet {
   border-radius: 15px;
-  border: 3px solid #66FCF1;
   background-color: #1F2833;
-  color: #66FCF1;
+  color: #8FBFE0;
   padding:5px;
   line-height:10px;
   display:none;
@@ -18,7 +17,7 @@
 .new-tweet h2 {
   margin-bottom: 10px;
   background-color: #1F2833;
-  border-bottom: 2px solid #66FCF1;
+  border-bottom: 2px solid #8FBFE0;
   padding-bottom: 10px;
   text-align: left;
   padding-left: 10px;
@@ -30,10 +29,11 @@
   padding-right: 20px;
   padding-bottom: 20px;
   font-size:18px;
+  color:#8FBFE0;
 }
 
 .new-tweet textarea {
-  background-color: #C5C6C7;
+  background-color: white;
   border-radius: 15px;
   padding: 10px;
   line-height: 30px;
@@ -43,8 +43,8 @@
 }
 
 .new-tweet input {
-  background-color: #45a29e;
-  color: #66FCF1;
+  background-color: #747C92;
+  color: #8FBFE0;
   padding: 10px;
   font-size: 2em;
   margin-top:15px;

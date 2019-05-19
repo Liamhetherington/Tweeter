@@ -4,22 +4,22 @@
   top: 0px;
   padding-left: 2em;
   padding-right: 2em;
-  background-color: #1F2833;
+  padding-bottom: 130px;
+  background-color: #3A2449;
 }
 
 #nav-bar .header {
-  text-shadow: -1px #66FCF1, 0 1px #66FCF1, 1px 0 #66FCF1, 0 -1px #66FCF1;
-  margin-top:10px;
+  padding-top:25px;
   line-height: 90px;
   font-size: 4em;
   margin-left: 5px;
-  color: #66FCF1;
+  color: #8FBFE0;
   float:left;
 }
 
 #nav-bar .logo {
+  padding-top: 25px;
   width: 100px;
-  height: 100px;
   margin-right: 5px;
   float: left;
 }
@@ -30,10 +30,9 @@
   width: 15% fixed;
   margin-right: 100px;
   margin-top: 20px;
-  color: #66FCF1;
+  color: #8FBFE0;
   background-color: #1F2833;
   border-radius: 15px;
-  border: 2px solid #66FCF1;
   font-size: 2em;
   opacity: 0.5;
   filter: alpha(opacity=50);
