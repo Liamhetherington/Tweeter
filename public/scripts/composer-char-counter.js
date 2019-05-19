@@ -4,7 +4,7 @@ $(document).ready(function() {
   $(textArea).on('keydown', function () {
   const textLength = $(this).val().length; //"this" === 'textarea'
   console.log(textLength)
-  const countRemaining = 140 - textLength;
+  const countRemaining = 139 - textLength;
   const counter = $(this).siblings('.counter');
   console.log("this is the counter: " + counter)
   $(counter).html(countRemaining);
