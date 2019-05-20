@@ -48,7 +48,7 @@ function loadTweets () {
     data: JSON,
     success: function (data) {
       renderTweets(data)
-            }
+    }
   })
 }
 
@@ -62,28 +62,28 @@ $(document).ready(function () {
 
    $(function () {
     let $submission = $('form');
-    $submission.on("submit", function (event) {
+    $submission.submit("submit", function (event) {
     $('#long-error').hide();
+    $('#empty-error').hide();
 
       let tweetLength = $('#tweetinput').val().length;
       event.preventDefault();
-
-        if (tweetLength > 140) {
-          $('#long-error').hide().slideToggle();
-        } else {
-          $.ajax({
-            type: 'POST',
-            url:'/tweets',
-            data: $('#new-post').serialize(),
-            success:(function () {
-               loadTweets();
-               $('#tweetinput').val('');
-               $('.counter').text(140)
-            })
+      if (tweetLength === 0 || tweetLength === " " || tweetLength === null) {
+        $('#empty-error').hide().slideToggle();
+      } else if (tweetLength > 140) {
+        $('#long-error').hide().slideToggle();
+      } else {
+        $.ajax({
+          type: 'POST',
+          url:'/tweets',
+          data: $('#new-post').serialize(),
+          success:(function () {
+             loadTweets();
+             $('#tweetinput').val('');
+             $('.counter').text(140)
           })
-
+        })
       }
-      return false;
     });
   });
 });
