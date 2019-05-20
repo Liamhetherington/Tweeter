@@ -1,3 +1,12 @@
+@media screen and (max-width: 1090px) {
+  #nav-bar .logo {
+    padding-top: 25px;
+    width: 50px;
+    margin-right: 5px;
+    float: left;
+  }
+}
+
 #nav-bar {
   height: 100px;
   width: 100%;
@@ -18,6 +27,7 @@
 }
 
 #nav-bar .logo {
+  max-width: 100px;
   padding-top: 25px;
   width: 100px;
   margin-right: 5px;

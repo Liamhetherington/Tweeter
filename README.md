@@ -19,7 +19,9 @@ This repository is the starter code for the project: Students will fork and clon
 - MongoDB
 - Body Parser
 
-##Final Product(Screenshots)
+## Final Product
+
+
 
 ![Tweet feed with hover activated over existing article](https://github.com/Liamhetherington/tweeter/blob/master/docs/tweet-hover.png?raw=true)
 

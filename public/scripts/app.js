@@ -14,14 +14,21 @@ function createTweetElement(tweet) {
     let $retweet = $('<img>').addClass('icon').attr('src', "https://img.icons8.com/ios/50/000000/retweet-filled.png");
     let $flag = $('<img>').addClass('icon').attr('src', "https://img.icons8.com/ios/50/000000/flag-filled.png");
 
-    $header.append($userAvatar).append($userID).append($userHandle);
-    $content.append($userNewTweet);
+    $header
+    .append($userAvatar)
+    .append($userID)
+    .append($userHandle);
+    $content
+    .append($userNewTweet);
     $footer
     .append($date)
     .append($flag)
     .append($like)
     .append($retweet)
-    $tweet.append($header).append($content).append($footer);
+    $tweet
+    .append($header)
+    .append($content)
+    .append($footer);
   return $tweet;
 }
 
@@ -41,8 +48,7 @@ function loadTweets () {
     data: JSON,
     success: function (data) {
       renderTweets(data)
-    }
-
+            }
   })
 }
 
@@ -50,39 +56,34 @@ loadTweets();
 
 $(document).ready(function () {
 
+  $('.compose').on("click", function () {
+    $('.new-tweet').slideToggle() && $('#tweetinput').focus();
+  });
 
+   $(function () {
+    let $submission = $('form');
+    $submission.on("submit", function (event) {
+    $('#long-error').hide();
 
-    $('.compose').on("click", function () {
-      $('.new-tweet').slideToggle() && $('#tweetinput').focus();
-    });
+      let tweetLength = $('#tweetinput').val().length;
+      event.preventDefault();
 
-     $(function () {
-      let $submission = $('form');
-      $submission.on("submit", function (event) {
-      $('#long-error').hide();
-
-        let tweetLength = $('#tweetinput').val().length;
-        event.preventDefault();
-
-          if (tweetLength > 140) {
-            $('#long-error').hide().slideToggle();
-          } else {
-            $.ajax({
-              type: 'POST',
-              url:'/tweets',
-              data: $('#new-post').serialize(),
-              success:(function () {
-                 loadTweets();
-                 $('#tweetinput').val('');
-                 $('.counter').text(140)
-              })
+        if (tweetLength > 140) {
+          $('#long-error').hide().slideToggle();
+        } else {
+          $.ajax({
+            type: 'POST',
+            url:'/tweets',
+            data: $('#new-post').serialize(),
+            success:(function () {
+               loadTweets();
+               $('#tweetinput').val('');
+               $('.counter').text(140)
             })
+          })
 
-        }
-        return false;
-      });
+      }
+      return false;
     });
+  });
 });
-
-// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
